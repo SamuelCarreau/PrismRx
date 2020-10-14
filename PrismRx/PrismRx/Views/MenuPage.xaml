@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:BaseReactiveContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PrismRx.Views.MenuPage"
+             x:TypeArguments="vm:MenuPageViewModel"
+             xmlns:vm="clr-namespace:PrismRx.ViewModels"
+             xmlns:views="clr-namespace:PrismRx.Views"
+             xmlns:app="clr-namespace:PrismRx">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button x:Name="searchPageButton" Text="Search page" CommandParameter="{x:Static app:AppPath.SearchPage}" />
+        </StackLayout>
+    </ContentPage.Content>
+</views:BaseReactiveContentPage>

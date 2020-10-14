@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:BaseReactiveContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PrismRx.Views.Search.MainPage"
+             x:TypeArguments="vm:MainPageViewModel"
+             xmlns:views="clr-namespace:PrismRx.Views"
+             xmlns:local="clr-namespace:PrismRx.Views.Search"
+             xmlns:vm="clr-namespace:PrismRx.ViewModels.Search">
+
+    <Grid RowDefinitions="auto,*" RowSpacing="0">
+        <Entry x:Name="searchEntry" Placeholder="Search"/>
+        <CollectionView x:Name="searchCollectionView" 
+                        Grid.Row="1"
+                        Margin="8,0">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <local:TextSearchView  ViewModel="{Binding}" />
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+
+</views:BaseReactiveContentPage>
